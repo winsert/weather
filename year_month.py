@@ -92,10 +92,10 @@ class weather():
 
             weather_dict = self.getDict(url)
 
-            filename = yy+'-'+mm+'.json'
+            filename = yy+'_'+mm+'.json'
             print "正在保存:",filename
             wj = open(filename, 'w')
-            wj.write(json.dumps(weather_dict, encoding="utf-8"))
+            wj.write(json.dumps(weather_dict))
             wj.close()
 
 if __name__ == '__main__':
